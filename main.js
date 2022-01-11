@@ -58,6 +58,20 @@ function userShare(container, post) {
       </div>            
   </div>`
     } 
+    let x = 0;
+    let likeButton = document.querySelectorAll(".like-button");
+    for (let i = 0; i < post.length; i++) {
+        likeButton[i].addEventListener("click", function () {
+            if (x % 2 == 0) {
+                this.classList.add("like-button--liked");
+                x++;
+            } else {
+                this.classList.remove("like-button--liked");
+                x--;
+            }
+        });
+    }
 }
+
 
 userShare(container, post)
