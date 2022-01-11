@@ -6,7 +6,7 @@ const post = [
      time: '6/25/2021',
      text: 'Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam ut alias.',
      image: 'https://unsplash.it/600/300?image=171',
-     likes: '80', 
+     likes: 80, 
     },
     {
     id: 2,
@@ -15,7 +15,7 @@ const post = [
     time: '3/9/2021',
     text: 'Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam ut alias.',
     image: 'https://i.picsum.photos/id/726/300/300.jpg?hmac=Yj8I6sABVPTHMMKzS-ORuF7u4ZfuedIGc3EbPZUY6xg',
-    likes: '120', 
+    likes: 120, 
     }
 ]
 
@@ -58,6 +58,7 @@ function userShare(container, post) {
       </div>            
   </div>`
     } 
+
     let x = 0;
     let likeButton = document.querySelectorAll(".like-button");
     for (let i = 0; i < post.length; i++) {
@@ -69,7 +70,7 @@ function userShare(container, post) {
                 this.classList.remove("like-button--liked");
                 x--;
             }
-        });
+        });    
     }
 }
 
